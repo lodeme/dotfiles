@@ -23,15 +23,16 @@
     # utils
     curl
     lazygit
-    bat
-    eza
+    bat		# cat with better formatting
+    eza		# ls with colors
     tlrc
-    nnn
-    zellij
+    nnn		# file browser in terminal
+    atuin	# search commands history
+    zellij	# terminal multiplexer
     openssh
     wget
     btop
-    ripgrep
+    ripgrep	# search recursively for text in files
     fd
     unzip
     fish
