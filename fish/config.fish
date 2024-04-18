@@ -7,6 +7,8 @@ alias lg='lazygit'
 alias fzd='cd $(fd --type directory | fzf)'
 alias gs='git status'
 alias gfs='git fetch && git status'
+alias ls='eza --all'
+alias ll='eza --long --all'
 zoxide init fish | source
 function z; cd $(zoxide query $argv); end
 function zi; cd $(zoxide query -i $argv); end
