@@ -27,6 +27,7 @@
     eza		# ls with colors
     tlrc
     nnn		# file browser in terminal
+    xclip
     atuin	# search commands history
     zellij	# terminal multiplexer
     openssh
