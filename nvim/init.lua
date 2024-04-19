@@ -27,12 +27,12 @@ vim.keymap.set("n", "<leader>bc", '"+y')
 vim.keymap.set("n", "<leader>by", '"+yy')
 
 -- Auto command for C and header files
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = {'c', 'h', 'cpp'},
-    callback = function()
-        vim.bo.tabstop = 4       -- Number of spaces a tab displays as
-        vim.bo.shiftwidth = 4    -- Number of spaces to use for each step of indent
-        vim.bo.expandtab = false -- Use actual tab characters
-    end
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "h", "cpp" },
+  callback = function()
+    vim.bo.tabstop = 4 -- Number of spaces a tab displays as
+    vim.opt.colorcolumn = "81"
+    vim.bo.shiftwidth = 4 -- Number of spaces to use for each step of indent
+    vim.bo.expandtab = false -- Use actual tab characters
+  end,
 })
-
