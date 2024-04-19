@@ -83,6 +83,7 @@
     isNormalUser = true;
     description = "Louis";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
   };
 
   # Allow unfree packages and experimental features
@@ -93,13 +94,16 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	vim
+	fish
 	neovim
 	wget
 	git
 	curl
 	home-manager
+	alacritty
   ];
 
+  programs.fish.enable = true;
   environment.variables.EDITOR = "neovim";
 
   # Some programs need SUID wrappers, can be configured further or are
