@@ -1,6 +1,5 @@
 # General config
 shell = "/opt/homebrew/bin/fish"
-window.startup_mode = "Fullscreen"
 
 [terminal]
 osc52 = "CopyPaste"
