@@ -105,6 +105,7 @@
 
   programs.fish.enable = true;
   environment.variables.EDITOR = "neovim";
+  environment.variables.TERMINAL = "alacritty";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
