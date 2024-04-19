@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 
+
 {
   home.username = "louis";
   home.homeDirectory = "/home/louis";
@@ -19,11 +20,13 @@
     pipx
     norminette
     lua54Packages.jsregexp
+    kubectl
 
     # utils
     curl
     lazygit
     bat		# cat with better formatting
+    fishPlugins.tide
     eza		# ls with colors
     tlrc
     nnn		# file browser in terminal
@@ -46,6 +49,7 @@
   programs.fish = {
       enable = true;            # Enable Fish shell management via Home Manager
       interactiveShellInit = "neofetch";
+      shellInit = "tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Solid --prompt_spacing=Sparse --icons='Few icons' --transient=No";
     };
 
 programs.alacritty = {
