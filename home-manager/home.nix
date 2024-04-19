@@ -42,10 +42,10 @@
     neofetch
   ];
 
-programs.fish = {
-    enable = true;            # Enable Fish shell management via Home Manager
-    interactiveShellInit = "neofetch";
-  };
+  programs.fish = {
+      enable = true;            # Enable Fish shell management via Home Manager
+      interactiveShellInit = "neofetch";
+    };
 
 programs.alacritty = {
   enable = true;

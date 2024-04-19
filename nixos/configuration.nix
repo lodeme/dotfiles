@@ -93,19 +93,19 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	vim
-	fish
-	neovim
-	wget
-	git
-	curl
-	home-manager
-	alacritty
+    vim
+    fish
+    neovim
+    wget
+    git
+    curl
+    home-manager
+    alacritty
+    firefox
   ];
 
   programs.fish.enable = true;
   environment.variables.EDITOR = "neovim";
-  environment.variables.TERMINAL = "alacritty";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
