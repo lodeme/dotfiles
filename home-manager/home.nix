@@ -62,6 +62,11 @@
         };
     };
 
+programs.zoxide = {
+  enable = true;
+  enableFishIntegration = true;
+  };
+
 programs.alacritty = {
   enable = true;
   settings = {
