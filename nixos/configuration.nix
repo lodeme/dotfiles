@@ -42,6 +42,10 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+  # Enable Hyprland
+  programs.hyprland.enable = true;
+
+/*
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -54,7 +58,7 @@
     layout = "us";
     variant = "";
   };
-
+*/
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
