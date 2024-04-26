@@ -1,10 +1,6 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, ...}
 
 {
-  home.username = "louis";
-  home.homeDirectory = "/home/louis";
-
   home.packages = with pkgs; [
     # coding
     neovim
@@ -134,9 +130,5 @@ programs.alacritty = {
     };
   };
   };
-
-};
-home.stateVersion = "23.11";
-programs.home-manager.enable = true;
 
 }
