@@ -16,7 +16,9 @@
   ];
 
   imports = [
-    ../../programs/all.nix
+    ../../programs/packages.nix
+    ../../programs/alacritty.nix
+    ../../programs/fish.nix
   ];
 }
 
