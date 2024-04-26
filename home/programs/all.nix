@@ -54,7 +54,7 @@
           gfs = "git fetch && git status";
           ls = "eza --all";
           ll = "eza --long -all";
-          rebuild = "sudo nixos-rebuild --flake /home/louis/.dotfiles/nixos/ --impure --show-trace switch";
+          rebuild = "sudo nixos-rebuild --flake /home/louis/.dotfiles --impure --show-trace switch";
         };
     };
 
