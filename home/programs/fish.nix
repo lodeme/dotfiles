@@ -1,13 +1,14 @@
-{ config, pkgs, ... }:
+q{ config, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     fish
     zoxide
     fishPlugins.tide
-  ]
+  ];
+
   programs.fish = {
-      enable = true;            # Enable Fish shell management via Home Manager
+      enable = true;
       interactiveShellInit = "neofetch";
       shellInit = "tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Solid --prompt_spacing=Sparse --icons='Few icons' --transient=No";
       shellAliases = {
