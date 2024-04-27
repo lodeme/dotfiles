@@ -6,8 +6,8 @@
       config = {
           user.name = "lodeme";
           user.email = "61187384+lodeme@users.noreply.github.com";
-          user.editor = "nvim";
-          user.ui = "auto";
+          core.editor = "nvim";
+          color.ui = "auto";
         };
     };
 }
