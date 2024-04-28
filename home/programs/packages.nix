@@ -21,7 +21,6 @@
     # utils
     curl
     lazygit
-    bat		# cat with better formatting
     eza		# ls with colors
     tlrc
     nnn		# file browser in terminal
@@ -38,4 +37,11 @@
     tree
     neofetch
   ];
+
+  programs.bat = {
+    enable = true;
+    config = {
+      theme = "base16";
+    };
+  };
 }
