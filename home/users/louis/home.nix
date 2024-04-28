@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-
+{ pkgs, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -20,6 +19,7 @@
     ../../programs/alacritty.nix
     ../../programs/fish.nix
     ../../programs/git.nix
+    ../../programs/nh.nix
   ];
 }
 
