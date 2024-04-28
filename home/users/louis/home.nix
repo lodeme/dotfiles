@@ -19,7 +19,6 @@
     ../../programs/alacritty.nix
     ../../programs/fish.nix
     ../../programs/git.nix
-    ../../programs/nh.nix
   ];
 }
 
