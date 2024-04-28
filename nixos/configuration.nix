@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -108,8 +108,17 @@
     firefox
   ];
 
+  # Setting up shell and editor
   programs.fish.enable = true;
   environment.variables.EDITOR = "neovim";
+
+  # Enabling nh to improve build experience
+  programs.nh = {
+    enable = true;
+    flake = "/home/louis/.dotfiles";
+    # clean.enable = true;
+    # clean.extraArgs = "--keep-since 4d --keep 3";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
