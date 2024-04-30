@@ -23,6 +23,11 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot hardware.bluetooth.enable = false;
+  services.blueman.enable = true;
+  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
