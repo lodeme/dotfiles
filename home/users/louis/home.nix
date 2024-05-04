@@ -14,6 +14,11 @@
     nixpkgs-fmt
   ];
 
+  nvim-nix = {
+      enable = true;
+      transparentBackground = false;
+  };
+
   imports = [
     ../../programs/packages.nix
     ../../programs/alacritty.nix
