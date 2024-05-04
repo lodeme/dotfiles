@@ -7,10 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvim-nix = {
-        url = "github:lodeme/flake.nvim";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -25,7 +21,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.louis = import ./home/users/louis/home.nix;
           }
-          inputs.nvim-nix.nixosModules.x86_64-linux.default
         ];
       };
     };
