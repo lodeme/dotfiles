@@ -53,8 +53,6 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  programs.seahorse.enable = false;
-  services.gnome3.gnome-keyring.enable = lib.mkForce false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -104,15 +102,19 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # code basics
     vim
     fish
-    neovim
     wget
     git
     curl
     home-manager
+
+    # GUI apps
     alacritty
     firefox
+    spotify
+    obsidian
   ];
 
   # Setting up shell and editor

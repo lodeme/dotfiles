@@ -224,22 +224,6 @@
         "type": "github"
       }
     },
-    "lua-utils-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1708177208,
-        "narHash": "sha256-9ildzQEMkXKZ3LHq+khGFgRQFxlIXQclQ7QU3fcU1C4=",
-        "owner": "nvim-neorg",
-        "repo": "lua-utils.nvim",
-        "rev": "e565749421f4bbb5d2e85e37c3cef9d56553d8bd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-neorg",
-        "repo": "lua-utils.nvim",
-        "type": "github"
-      }
-    },
     "neovim-flake": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -347,30 +331,28 @@
         "flake-utils": "flake-utils",
         "gen-luarc": "gen-luarc",
         "gitmoji-nvim": "gitmoji-nvim",
-        "lua-utils-nvim": "lua-utils-nvim",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": [
           "nixpkgs"
         ],
         "nvim-puppeteer": "nvim-puppeteer",
         "nvim-rooter": "nvim-rooter",
-        "pathlib-nvim": "pathlib-nvim",
         "telescope-helpgrep-nvim": "telescope-helpgrep-nvim",
         "vim-characterize": "vim-characterize",
         "vim-kitty": "vim-kitty",
         "vim-minizinc": "vim-minizinc"
       },
       "locked": {
-        "lastModified": 1714323579,
-        "narHash": "sha256-+0srNE+e1PAP8p4ZvWYXqj2u3qrJ4HbpWeXQTcXiICM=",
-        "owner": "pierrot-lc",
-        "repo": "nvim-nix",
-        "rev": "6b32d6564ec1aadd0bac0a2ce5fd436a5451c6fd",
+        "lastModified": 1714427816,
+        "narHash": "sha256-APMuVZL2GAHVIl+CC1JTG+0H9i+yvm7COY5hQrd83wU=",
+        "owner": "lodeme",
+        "repo": "flake.nvim",
+        "rev": "7688d678218248446f19adb99a407e66a940807d",
         "type": "github"
       },
       "original": {
-        "owner": "pierrot-lc",
-        "repo": "nvim-nix",
+        "owner": "lodeme",
+        "repo": "flake.nvim",
         "type": "github"
       }
     },
@@ -403,22 +385,6 @@
       "original": {
         "owner": "notjedi",
         "repo": "nvim-rooter.lua",
-        "type": "github"
-      }
-    },
-    "pathlib-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1714141112,
-        "narHash": "sha256-Hx7RGyVY3j4LvNWQuQI5Vq9mkq+U/ntxgDlw5VxbUII=",
-        "owner": "pysan3",
-        "repo": "pathlib.nvim",
-        "rev": "723f9cd0d12a4bb8961cff4c2ac7edbfcf50a280",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pysan3",
-        "repo": "pathlib.nvim",
         "type": "github"
       }
     },
