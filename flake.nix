@@ -8,7 +8,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvim-nix = {
-      url = "github:pierrot-lc/nvim-nix";
+      # url = "github:lodeme/flake.nvim";
+      url = "path:./home/programs/nvim/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
