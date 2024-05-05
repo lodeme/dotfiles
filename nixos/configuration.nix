@@ -53,8 +53,6 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  programs.seahorse.enable = false;
-  services.gnome3.gnome-keyring.enable = lib.mkForce false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
