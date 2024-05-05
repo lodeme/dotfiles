@@ -104,15 +104,18 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # code basics
     vim
     fish
-    neovim
     wget
     git
     curl
     home-manager
+
+    # GUI apps
     alacritty
     firefox
+    spotify
   ];
 
   # Setting up shell and editor
