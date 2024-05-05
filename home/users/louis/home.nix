@@ -12,6 +12,7 @@
 
   home.packages = with pkgs; [
     nixpkgs-fmt
+    nvim-pkg
   ];
 
   imports = [

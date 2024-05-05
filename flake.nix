@@ -7,9 +7,31 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvim-nix = {
+      url = "github:pierrot-lc/nvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+    outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  }: let
+    system = "x86_64-linux";
+    lib = nixpkgs.lib;
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+      overlays = [
+        inputs.nvim-nix.overlays.${system}.default
+      ];
+    };
+  in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -20,6 +42,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.louis = import ./home/users/louis/home.nix;
+            home-manager.extraSpecialArgs = { inherit pkgs; };
           }
         ];
       };
