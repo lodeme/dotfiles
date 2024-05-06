@@ -20,6 +20,7 @@
     ./fish.nix
     ./git.nix
     ./nvim/nvim.nix
+    ./hypr/hypr.nix
   ];
 }
 
