@@ -34,7 +34,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.louis = import ./home/louis.nix;
+            home-manager.users.louis = import ./home/home.nix;
             home-manager.extraSpecialArgs = { inherit pkgs; };
           }
         ];
