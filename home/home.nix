@@ -19,7 +19,7 @@
     ./alacritty.nix
     ./fish.nix
     ./git.nix
-    ./nvim.nix
+    ./nvim/nvim.nix
   ];
 }
 
