@@ -47,19 +47,15 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # Enable Hyprland
+  programs.hyprland = { enable = true; };
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  # Tell Electron apps to use Wayland
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
   };
- 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -102,6 +98,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # Hyprland
+    waybar
+    mako
+    libnotify
+    swww
+    rofi-wayland
+    playerctl
+
     # code basics
     vim
     fish
@@ -112,6 +116,7 @@
 
     # GUI apps
     alacritty
+    kitty
     firefox
     spotify
     obsidian
@@ -126,28 +131,9 @@
   programs.nh = {
     enable = true;
     flake = "/home/louis/.dotfiles";
-    # clean.enable = true;
-    # clean.extraArgs = "--keep-since 4d --keep 3";
+    clean.enable = true;
+    clean.extraArgs = "--keep 10";
   };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

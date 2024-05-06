@@ -6,7 +6,7 @@
     settings = {
       terminal.osc52 = "CopyPaste";
       font = {
-        size = 18.0;
+        size = 14.0;
         normal = {
           family = "JetBrainsMonoNL Nerd Font Mono";
           style = "Regular";
