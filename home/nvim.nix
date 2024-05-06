@@ -26,6 +26,7 @@
           cmp-path
           cmp_luasnip
           conform-nvim
+          auto-session
           dashboard-nvim
           dressing-nvim
           flash-nvim
