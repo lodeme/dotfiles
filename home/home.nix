@@ -16,10 +16,10 @@
   ];
 
   imports = [
-    ../../programs/packages.nix
-    ../../programs/alacritty.nix
-    ../../programs/fish.nix
-    ../../programs/git.nix
+    ./packages.nix
+    ./alacritty.nix
+    ./fish.nix
+    ./git.nix
   ];
 }
 

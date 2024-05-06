@@ -7,11 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvim-nix = {
-      url = "github:lodeme/flake.nvim";
-      # url = "path:~/.dotfiles/home/programs/nvim/";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
     outputs = inputs @ {
@@ -28,21 +23,18 @@
       config = {
         allowUnfree = true;
       };
-      overlays = [
-        inputs.nvim-nix.overlays.${system}.default
-      ];
     };
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         modules = [
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.louis = import ./home/users/louis/home.nix;
+            home-manager.users.louis = import ./home/louis.nix;
             home-manager.extraSpecialArgs = { inherit pkgs; };
           }
         ];

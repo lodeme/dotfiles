@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./ser5/hardware-configuration.nix
+      ./ser5.nix
     ];
 
   # Bootloader.
