@@ -56,6 +56,16 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
+
+  # Adding waybar
+  nixpkgs.overlays = [
+    (self: super: {
+      waybar = super.waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      });
+    })
+  ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -105,6 +115,7 @@
     swww
     rofi-wayland
     playerctl
+    pavucontrol
 
     # code basics
     vim
