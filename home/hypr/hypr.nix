@@ -10,6 +10,7 @@
     mkdir -p $HOME/.config/hypr
   '';
 
+  home.file.".config/hypr/start.sh".source = ./start.sh;
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
 }
 
