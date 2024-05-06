@@ -115,6 +115,7 @@
     firefox
     spotify
     obsidian
+    vscode
   ];
 
   # Setting up shell and editor
