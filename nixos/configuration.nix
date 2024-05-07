@@ -125,6 +125,7 @@
     playerctl
     pavucontrol
     wev # wayland event viewer
+    networkmanagerapplet #network manager
 
     # code basics
     vim
