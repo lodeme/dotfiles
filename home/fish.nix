@@ -10,7 +10,13 @@
   programs.fish = {
       enable = true;
       interactiveShellInit = "neofetch";
-      shellInit = "tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Solid --prompt_spacing=Sparse --icons='Few icons' --transient=No";
+      shellInit = ''
+        tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Solid --prompt_spacing=Sparse --icons='Few icons' --transient=No
+        function devenv
+          nix flake init --template github:lodeme/nix-dev-templates#$argv
+          direnv allow
+        end
+      '';
       shellAliases = {
           v = "nvim";
           lg = "lazygit";
