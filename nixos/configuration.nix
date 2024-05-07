@@ -134,6 +134,8 @@
     git
     curl
     home-manager
+    direnv
+    nix-direnv
 
     # GUI apps
     alacritty
