@@ -136,6 +136,7 @@
     home-manager
     direnv
     nix-direnv
+    gh
 
     # GUI apps
     alacritty
