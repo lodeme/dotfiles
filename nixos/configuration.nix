@@ -142,6 +142,7 @@
     spotify
     obsidian
     vscode
+    slack
   ];
 
   # Setting up shell and editor
