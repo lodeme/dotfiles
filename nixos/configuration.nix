@@ -116,6 +116,7 @@
     rofi-wayland
     playerctl
     pavucontrol
+    wev # wayland event viewer
 
     # code basics
     vim
