@@ -52,6 +52,11 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
+  services.xserver.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
+  #services.xserver.displayManager.sddm.theme = "where_is_my_sddm_theme";
+
   # Tell Electron apps to use Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
