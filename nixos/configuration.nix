@@ -62,6 +62,9 @@
     NIXOS_OZONE_WL = "1";
   };
 
+# Enable file manager
+  programs.thunar.enable = true;
+
   # Adding waybar
   nixpkgs.overlays = [
     (self: super: {

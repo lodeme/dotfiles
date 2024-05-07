@@ -7,3 +7,5 @@ swww init &
 
 waybar &
 mako
+blueman-applet
+
