@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, ... }: {
 
   programs.vscode = {
   enable = true;
@@ -60,7 +60,7 @@
 
       ]
     ;
-};
+  };
 
   imports = [
     ./packages.nix
