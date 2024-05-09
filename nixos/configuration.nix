@@ -107,6 +107,8 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    fira-code
+    fira-code-symbols
   ];
 
   # Allow unfree packages and experimental features
