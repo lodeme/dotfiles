@@ -144,7 +144,6 @@
     firefox
     spotify
     obsidian
-    vscode
     slack
   ];
 
