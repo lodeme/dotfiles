@@ -23,6 +23,7 @@
     ./git.nix
     ./nvim/nvim.nix
     ./hypr/hypr.nix
+    ./hypr/waybar/waybar.nix
     ./vscode.nix
   ];
 }
