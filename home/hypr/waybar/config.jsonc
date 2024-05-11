@@ -1,63 +1,123 @@
-// __        __          _                 
-// \ \      / /_ _ _   _| |__   __ _ _ __  
-//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
-//   \ V  V / (_| | |_| | |_) | (_| | |    
-//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
-//                 |___/                   
-//  
-// by Stephan Raabe (2023) 
-// ----------------------------------------------------- 
-//
 {
-    // General Settings
+  "layer": "top",
+    "height": 10,
+    "modules-left": ["custom/arch", "hyprland/workspaces" , "memory"],
+    "modules-center": ["custom/playerctl"],
+    "modules-right": ["backlight","pulseaudio", "battery", "network","clock"],
+    "custom/arch": {
+      "format": "  ",
+      "on-click": "sh /home/knightfall/.config/hypr/scripts/exec_wofi application_launcher"
+    },
+    "custom/cava_test": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/sound/expand cava-icon"
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "all-outputs": true,
+      "persistent_workspaces" :{
+          "1": [],
+	 		    "2": [],
+	 		    "3": [],
+	 		    "4": [],
+	 		    "5": [],
+	 		    "6": [],
+	 		    "7": [],
+	 		    "8": [],
+	 		    "9": [],
+	 		    "10": []
+        },
+        "format-icons": {
+                "1": "1",
+             		"2": "2",
+             		"3": "3",
+             		"4": "4",
+             		"5": "5",
+             		"6": "6",
+             		"7": "7",
+             		"8": "8",
+             		"9": "9",
+             		"10": "1〇"
+          }
+    },
+    "clock": {
+      "format": "<span color='#b69bf1'> </span>{:%H:%M}",
+  "format-alt": "<span foreground='#b69bf1'> </span><span>{:%I:%M %p %a %d}</span>",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/cava": {
+      "format": "<span color='#f7768e'></span> {volume}%",
+      "exec": "sh ~/.config/polybar/scripts/cava.sh" ,
+      "label": "%output%"
+      },
+    "backlight": {
+      "device": "amdgpu_b10",
+      "format": "<span color='#d9b172'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/sound": {
+      "format": "<span color='#5d7'> </span>{}",
+      "exec": "custom-alsa.sh",
+    },
+    "network": {
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#90cdfa'> </span>{essid}({signalStrength}%)",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#ff005f'>󰖪 </span>No Network",
+      "on-click": "kitty nmtui"
+    },
+    "battery": {
+      "format": "<span color='#a8cd76'>{icon}</span> {capacity}%",
+      //"format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#a8cd76'></span> {capacity}%"
+    },
+    "pulseaudio": {
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "format": "<span color='#f7768e'></span> {volume}%",
+      "format-muted": "<span color='#f7768e'>ﱝ</span>",
+      "format-icons": {
+       "headphone": "",
+       "hands-free": "",
+       "headset": "",
+       "phone": "",
+       "portable": "",
+       "car": "",
+       "default": ["奔", "墳"]
+    },
+    "on-click-right" : "pavucontrol"
+    },
+    "memory": {
+    "format": "<span foreground='#9ece6a'></span> {}%",
+    "on-click": "kitty htop"
+    },
+    "tray": {
+    "icon-size": 20,
+    "reverse-direction": true,
+    "spacing": 6
+    },
+    "cpu": {
+    "format": "<span foreground='#ff005f'></span>  {usage}%"
+     },
+     "temperature": {
+    "critical-threshold": 80,
+    "format": "<span foreground='#5d73ca'></span> {temperatureC}°C"
+     },
+    "custom/playerctl": {
+     "format": "{icon}  <span>{}</span>",
+     "return-type": "json",
+     "max-length": 55,
+     "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+     "on-click-middle": "playerctl previous",
+     "on-click": "playerctl play-pause",
+     "on-click-right": "playerctl next",
+     "format-icons": {
+       "Paused": "<span foreground='#bb9af7'></span>",
+       "Playing": "<span foreground='#bb9af7'></span>"
+     }
+     }
 
-    // Position TOP
-    "layer": "top",
-    "margin-bottom": 0,
-
-    // Position BOTTOM
-    // "position": "bottom",
-    // "margin-top": 0,
-    // "margin-bottom": 14,
-    
-    "layer": "top",
-    "margin-left": 0,
-    "margin-right": 0,    
-    "spacing": 0,
-
-    // Load Modules
-    "include": ["~/.dotfiles/home/hypr/waybar/modules.json"],
-
-    // Modules Left
-    "modules-left": [
-        "custom/appmenu",
-        "custom/settings",
-        "custom/waybarthemes",
-        "custom/wallpaper",
-        //"wlr/taskbar",
-        "group/quicklinks",
-        "hyprland/window",
-        "custom/starter"
-    ],
-
-    // Modules Center
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
-
-    // Modules Right    
-    "modules-right": [
-        "custom/updates",
-        "pulseaudio",
-        "bluetooth",
-        "battery", 
-        "network",
-        "group/hardware",
-        "custom/cliphist",
-        "idle_inhibitor",
-        "tray",
-        "custom/exit",
-        "custom/ml4w-welcome",
-        "clock"
-    ]
 }
+
