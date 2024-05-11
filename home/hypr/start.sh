@@ -5,7 +5,5 @@ swww init &
 # set wallpaper
 # swww img ~/path/to/file.png &
 
-waybar &
 mako
-blueman-applet
 nm-applet

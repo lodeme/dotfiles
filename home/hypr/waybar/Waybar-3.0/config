@@ -13,22 +13,21 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/filler",
-    "custom/playerctl",
-    "custom/filler",
     "disk",
     "custom/filler",
-    "custom/pacman"
+    "custom/playerctl",
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
-    "battery",
-    "custom/dot",
-    "backlight",
+    //"battery",
+    //"custom/dot",
+    //"backlight",
     "pulseaudio",
     "custom/dot",
     "custom/separator",
     "network",
+    "custom/dot",
+    "custom/bluetooth"
     "custom/dot",
     "clock"
   ], 
@@ -36,7 +35,7 @@
       "format": "[<span foreground='#46c880'>  </span> <span>{}</span> ]",
       "return-type": "json",
       "max-length": 55,
-      "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}\"}' -F",
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}} - {{album}}\"}' -F",
       "on-click": "playerctl play-pause",
       "on-click-middle": "playerctl previous",
       "on-click-right": "playerctl next",
@@ -157,7 +156,7 @@
     "format": "  "
   },
   "custom/launcher": {
-    "format": " 󰣇"
+    "format": " 󱄅"
   },
   "custom/separator": {
     "format": " "
@@ -168,7 +167,7 @@
     "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
   },
 
- "custom/pacman": {
+ "custom/bluetooth": {
    "format": "  ",
    "on-click": "blueberry"
  },
