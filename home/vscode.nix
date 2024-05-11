@@ -19,7 +19,7 @@
     "editor.fontFamily" = "Fira Code";
     "editor.fontWeight" = 500;
     "editor.fontLigatures" = true;
-    "git.confirmSync": false;
+    "git.confirmSync"= false;
   };
   extensions =
     with pkgs.vscode-extensions;
