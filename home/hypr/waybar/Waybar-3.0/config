@@ -12,8 +12,8 @@
     "custom/separator",
     "cpu",
     "memory",
-    "temperature",
     "disk",
+    "temperature",
     "custom/filler",
     "custom/playerctl",
   ],
@@ -27,15 +27,15 @@
     "custom/separator",
     "network",
     "custom/dot",
-    "custom/bluetooth"
+    "custom/bluetooth",
     "custom/dot",
-    "clock"
+    "clock",
   ], 
   "custom/playerctl": {
       "format": "[<span foreground='#46c880'>  </span> <span>{}</span> ]",
       "return-type": "json",
       "max-length": 55,
-      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}} - {{album}}\"}' -F",
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}} - {{album}}\"}' -F | sed 's/&/&amp;/g'",
       "on-click": "playerctl play-pause",
       "on-click-middle": "playerctl previous",
       "on-click-right": "playerctl next",
@@ -52,7 +52,7 @@
   },
      "disk": {
     "interval": 1,
-    "format": "<span color=\"#68b0d6\"> </span> {}%",
+    "format": "<span color=\"#68b0d6\">󱘲</span> {}%",
     "on-click": "filelight /",
     "on-click-right": "filelight /home/"
   },
@@ -93,14 +93,14 @@
   },
 
   "clock": {
-    "format": "<b>{:%I:%M %p }</b>",
+    "format": "<b>{:%H:%M }</b>",
     "format-alt": "<b>{:%a.%d,%b}</b>",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
   "cpu": {
     "interval": 10,
-    "format": " {usage}% ",
+    "format": " {usage}% ",
     "max-length": 10,
     "on-click": "htop"
   },
