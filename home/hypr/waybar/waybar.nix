@@ -6,10 +6,8 @@
     if [ -d $HOME/.config/waybar ]; then
       rm -rf $HOME/.config/waybar
     fi
-    # Create a fresh directory
-    mkdir -p $HOME/.config/waybar
   '';
 
-  home.file.".config/waybar".source = ./waybar;
+  home.file.".config/waybar".source = ../waybar;
 }
 
