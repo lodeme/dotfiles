@@ -224,5 +224,11 @@ window#waybar {
   padding-left: 10px;
 }
 
+#custom-playerctl {
+  /* color: #1F6840; */
+  /* color: #A3E3C0; */
+  color: #BDEBD2;
+}
+
 /*# sourceMappingURL=style.css.map */
 
