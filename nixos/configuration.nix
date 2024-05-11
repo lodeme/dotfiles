@@ -128,6 +128,7 @@
     pavucontrol
     wev # wayland event viewer
     networkmanagerapplet #network manager
+    blueberry # gnome bluetooth manager
 
     # code basics
     vim

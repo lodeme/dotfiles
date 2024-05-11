@@ -7,6 +7,7 @@
     luarocks
     cmake
     cargo
+    tcsh
     llvmPackages_latest.llvm
     python3
     nodejs
