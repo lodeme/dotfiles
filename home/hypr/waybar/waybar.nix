@@ -10,7 +10,7 @@
     mkdir -p $HOME/.config/waybar
   '';
 
-  home.file.".config/waybar/config".source = ./config;
+  home.file.".config/waybar/config".source = ./config.jsonc;
   home.file.".config/waybar/modules.json".source = ./modules.json;
   home.file.".config/waybar/style.css".source = ./style.css;
 }
