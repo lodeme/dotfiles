@@ -14,7 +14,7 @@
     "memory",
     "disk",
     "temperature",
-    "custom/filler",
+    "custom/separator",
     "custom/playerctl",
   ],
   "modules-center": ["hyprland/workspaces"],
