@@ -19,14 +19,14 @@
     "editor.fontFamily" = "Fira Code";
     "editor.fontWeight" = 500;
     "editor.fontLigatures" = true;
-    "git.confirmSync"= false;
+    "git.confirmSync" = false;
+    "git.autofetch" = true;
+    "extensions.ignoreRecommendations" = true;
   };
   extensions =
     with pkgs.vscode-extensions;
       [
         # THEMES
-        dracula-theme.theme-dracula
-        github.github-vscode-theme
         jdinhlife.gruvbox
 
         # GIT
