@@ -2,6 +2,13 @@
 
 {
   home.packages = with pkgs; [
+    # apps
+    thunderbird
+    protonmail-bridge
+    beeper
+    pass
+    libsForQt5.okular #pdfs
+
     # coding
     git
     luarocks

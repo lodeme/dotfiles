@@ -22,6 +22,7 @@
     "git.confirmSync" = false;
     "git.autofetch" = true;
     "extensions.ignoreRecommendations" = true;
+    "editor.renderWhitespace" = "all";
   };
   extensions =
     with pkgs.vscode-extensions;

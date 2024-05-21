@@ -25,6 +25,7 @@
     ./hypr/hypr.nix
     ./hypr/waybar/waybar.nix
     ./vscode.nix
+    ./mako.nix
   ];
 }
 
