@@ -8,7 +8,7 @@ local plugins = {
 table.insert(plugins, {
   "LazyVim/LazyVim",
   opts = {
-    colorscheme = "rose-pine-moon",
+    colorscheme = "catppuccin-macchiato",
   },
 })
 
