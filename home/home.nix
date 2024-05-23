@@ -14,8 +14,6 @@
     nixpkgs-fmt
   ];
 
-
-
   imports = [
     ./packages.nix
     ./alacritty.nix
