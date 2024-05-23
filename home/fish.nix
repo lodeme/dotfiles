@@ -26,6 +26,7 @@
           ls = "eza --all";
           ll = "eza --long -all";
           rebuild = "sudo nixos-rebuild --flake /home/louis/.dotfiles --impure --show-trace switch";
+          rmdevenv = "rm -rf .direnv .envrc flake.lock flake.nix";
         };
     };
 

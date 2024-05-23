@@ -129,6 +129,7 @@
     wev # wayland event viewer
     networkmanagerapplet #network manager
     blueberry # gnome bluetooth manager
+    hyprcursor
 
     # code basics
     vim
