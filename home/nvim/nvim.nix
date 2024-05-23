@@ -106,6 +106,14 @@
             { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {} } },
           },
         })
+
+        -- settings
+        vim.o.scrolloff = 10
+        vim.o.wrap = true
+        vim.o.shell = "fish"
+        vim.o.showtabline = 0
+        vim.opt.number = true
+        vim.opt.relativenumber = true
       '';
   };
 
@@ -123,5 +131,5 @@
     "${parsers}/parser";
 
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
-  xdg.configFile."nvim/lua".source = ./lua;
+  home.file.".config/nvim/lua".source = ./lua;
 }
