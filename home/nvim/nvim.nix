@@ -20,7 +20,6 @@
         plugins = with pkgs.vimPlugins; [
           # LazyVim
           LazyVim
-          bufferline-nvim
           cmp-buffer
           cmp-nvim-lsp
           cmp-path
@@ -59,6 +58,12 @@
           vim-illuminate
           vim-startuptime
           which-key-nvim
+          #auto-session
+          #session-lens
+          gruvbox
+          kanagawa-nvim
+          nvim-osc52
+          rose-pine
           { name = "LuaSnip"; path = luasnip; }
           { name = "catppuccin"; path = catppuccin-nvim; }
           { name = "mini.ai"; path = mini-nvim; }
