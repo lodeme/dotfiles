@@ -7,6 +7,7 @@
       # LazyVim
       lua-language-server
       stylua
+      llvmPackages_latest.llvm
       # Telescope
       ripgrep
     ];

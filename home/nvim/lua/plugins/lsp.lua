@@ -36,5 +36,9 @@ return {
         },
       },
     })
+
+    --Configure clangd
+    require'lspconfig'.clangd.setup{}
+
   end,
 }
