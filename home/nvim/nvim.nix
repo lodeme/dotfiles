@@ -8,6 +8,7 @@
       lua-language-server
       stylua
       llvmPackages_latest.llvm
+      nil
       # Telescope
       ripgrep
     ];
