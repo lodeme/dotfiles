@@ -1,3 +1,5 @@
+print("Sourcing lspconfig")
+
 return {
   "neovim/nvim-lspconfig",
   config = function()
