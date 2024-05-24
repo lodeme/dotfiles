@@ -122,10 +122,7 @@
     let
       parsers = pkgs.symlinkJoin {
         name = "treesitter-parsers";
-        paths = (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
-          c
-          lua
-        ])).dependencies;
+        paths = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
       };
     in
     "${parsers}/parser";
