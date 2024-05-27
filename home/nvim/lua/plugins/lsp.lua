@@ -1,3 +1,5 @@
+print("Sourcing lspconfig")
+
 return {
   "neovim/nvim-lspconfig",
   config = function()
@@ -12,7 +14,7 @@ return {
       -- Add more buffer-local keybindings if needed
     end
 
-    -- Configure the lua-language-server
+    -- Configure Lua
     nvim_lsp.lua_ls.setup({
       on_attach = on_attach,
       settings = {
@@ -34,5 +36,12 @@ return {
         },
       },
     })
+
+    --Configure C/C++
+    require'lspconfig'.clangd.setup{}
+
+    -- Configure Nix
+    require'lspconfig'.nil_ls.setup{}
+
   end,
 }

@@ -50,15 +50,10 @@ return {
               if next(buf_clients) == nil then
                 return "None"
               else
-                -- Concatenate all client names if there's more than one
-                local client_names = {}
-                for _, client in ipairs(buf_clients) do
-                  table.insert(client_names, client.name)
-                end
-                return tostring(table.concat(client_names, ", "))
+                return buf_clients[1].name
               end
             end,
-            icon = "LSP:",
+            icon = "󰧑 ",
           },
           {
             function()
@@ -66,15 +61,10 @@ return {
               if next(buf_clients) == nil then
                 return "None"
               else
-                -- Concatenate all client names if there's more than one
-                local client_names = {}
-                for _, client in ipairs(buf_clients) do
-                  table.insert(client_names, client.name)
-                end
-                return tostring(table.concat(client_names, ", "))
+                return buf_clients[1].name
               end
             end,
-            icon = "FMT:",
+            icon = " ",
           },
           {
             function()
@@ -82,10 +72,10 @@ return {
               if next(linters) == nil then
                 return "None"
               else
-                return table.concat(linters, ", ")
+                return linters[1]
               end
             end,
-            icon = "LNT:",
+            icon = " ",
           },
           {
             function()
@@ -96,7 +86,7 @@ return {
                 return parser:lang()
               end
             end,
-            icon = "TST:",
+            icon = "󱁕 ",
           },
        },
         -- lualine_x = {

@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   programs.alacritty = {
     enable = true;
@@ -26,46 +24,83 @@
       };
       colors = {
         primary = {
-          background = "#232136";
-          foreground = "#e0def4";
+          background = "#24273a";
+          foreground = "#cad3f5";
+          dim_foreground = "#8087a2";
+          bright_foreground = "#cad3f5";
         };
         cursor = {
-          text = "#e0def4";
-          cursor = "#56526e";
+          text = "#24273a";
+          cursor = "#f4dbd6";
         };
         vi_mode_cursor = {
-          text = "#e0def4";
-          cursor = "#56526e";
+          text = "#24273a";
+          cursor = "#b7bdf8";
         };
-        selection = {
-          text = "#e0def4";
-          background = "#44415a";
+        search = {
+          matches = {
+            foreground = "#24273a";
+            background = "#a5adcb";
+          };
+          focused_match = {
+            foreground = "#24273a";
+            background = "#a6da95";
+          };
         };
-        normal = {
-          black = "#393552";
-          red = "#eb6f92";
-          green = "#3e8fb0";
-          yellow = "#f6c177";
-          blue = "#9ccfd8";
-          magenta = "#c4a7e7";
-          cyan = "#ea9a97";
-          white = "#e0def4";
-        };
-        bright = {
-          black = "#6e6a86";
-          red = "#eb6f92";
-          green = "#3e8fb0";
-          yellow = "#f6c177";
-          blue = "#9ccfd8";
-          magenta = "#c4a7e7";
-          cyan = "#ea9a97";
-          white = "#e0def4";
+        footer_bar = {
+          foreground = "#24273a";
+          background = "#a5adcb";
         };
         hints = {
-          start = { foreground = "#908caa"; background = "#2a273f"; };
-          end = { foreground = "#6e6a86"; background = "#2a273f"; };
+          start = {
+            foreground = "#24273a";
+            background = "#eed49f";
+          };
+          end = {
+            foreground = "#24273a";
+            background = "#a5adcb";
+          };
         };
+        selection = {
+          text = "#24273a";
+          background = "#f4dbd6";
+        };
+        normal = {
+          black = "#494d64";
+          red = "#ed8796";
+          green = "#a6da95";
+          yellow = "#eed49f";
+          blue = "#8aadf4";
+          magenta = "#f5bde6";
+          cyan = "#8bd5ca";
+          white = "#b8c0e0";
+        };
+        bright = {
+          black = "#5b6078";
+          red = "#ed8796";
+          green = "#a6da95";
+          yellow = "#eed49f";
+          blue = "#8aadf4";
+          magenta = "#f5bde6";
+          cyan = "#8bd5ca";
+          white = "#a5adcb";
+        };
+        dim = {
+          black = "#494d64";
+          red = "#ed8796";
+          green = "#a6da95";
+          yellow = "#eed49f";
+          blue = "#8aadf4";
+          magenta = "#f5bde6";
+          cyan = "#8bd5ca";
+          white = "#b8c0e0";
+        };
+        indexed_colors = [
+          { index = 16; color = "#f5a97f"; }
+          { index = 17; color = "#f4dbd6"; }
+        ];
       };
     };
   };
 }
+
