@@ -44,6 +44,7 @@
     fzf
     tree
     neofetch
+    gnupg1orig # generate gpg keys
   ];
 
   programs.bat = {

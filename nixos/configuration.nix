@@ -65,6 +65,11 @@
 # Enable file manager
   programs.thunar.enable = true;
 
+  # Enable connection of USB devices
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+  services.devmon.enable = true;
+
   # Adding waybar
   nixpkgs.overlays = [
     (self: super: {
@@ -131,6 +136,9 @@
     blueberry # gnome bluetooth manager
     hyprcursor
     wl-clipboard
+    usbutils
+    udiskie
+    udisks
 
     # code basics
     vim
