@@ -8,6 +8,7 @@
     beeper
     pass
     libsForQt5.okular #pdfs
+    calibre
 
     # coding
     git
