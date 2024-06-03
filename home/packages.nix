@@ -9,6 +9,7 @@
     pass
     libsForQt5.okular #pdfs
     calibre
+    gnome-multi-writer #USB flashing utility
 
     # coding
     git
