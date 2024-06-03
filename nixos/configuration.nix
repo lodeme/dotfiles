@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./ser5.nix
+      ./thinkpad.nix
     ];
 
   # Bootloader.
